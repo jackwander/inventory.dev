@@ -16,3 +16,7 @@ CRUD for inventory.
 1. stock_price
 1. stock_brand
 1. stock_year
+
+
+### Reminder.
+put the `www` folder to your `htdocs` folder in xampp and rename it.
