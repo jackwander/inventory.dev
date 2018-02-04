@@ -1,3 +1,5 @@
+<div class="offset-md-3 col-md-6">
+<h3>Edit stock</h3>
 <form action="/processes/process.stock.php?action=edit" method="POST" onsubmit="return confirm('Are you sure you want to edit this?')">
 <?php 
   $stocks = new Stock();
@@ -6,6 +8,8 @@
 ?>
 <?php foreach ($result as $value): ?>
   <input type="hidden" name="id" value="<?php echo $value['stock_id'] ?>">
+<div class="row">
+ <div class="col-md-6">
   <div class="form-group">
     <label>Name</label>
     <input type="text" name="name" required="" value="<?php echo $value['stock_name'] ?>" class="form-control" />
@@ -22,6 +26,8 @@
     <label>QTY</label>
     <input type="number" name="qty" required="" value="<?php echo $value['stock_quantity'] ?>" class="form-control" />
   </div>
+ </div>
+ <div class="col-md-6">
   <div class="form-group">
     <label>Price</label>
     <input type="number" name="price" required="" value="<?php echo $value['stock_price'] ?>" step="0.01" class="form-control"/ >
@@ -34,8 +40,11 @@
     <label>Year</label>
     <input type="number" name="year" required="" value="<?php echo $value['stock_year'] ?>" class="form-control" />
   </div>
+ </div> 
+</div>
 <?php endforeach ?>
   <div class="form-group">
     <input type="submit" name="submit" value="Save" class="form-control" />
   </div>
 </form>
+</div>
