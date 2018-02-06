@@ -15,8 +15,8 @@ class Stock{
   public function view_stocks() {
     $sql = "SELECT * FROM `stockholders` ORDER BY `time_added` DESC, `date_added` DESC";
     $result=mysqli_query($this->db, $sql);
-    $user_data = mysqli_fetch_array($result);
     $count_row=$result->num_rows;
+
     if($count_row>0){
       $result = mysqli_query($this->db, $sql);
       while($row=mysqli_fetch_assoc($result)){
@@ -31,8 +31,8 @@ class Stock{
   public function get_stock($id) {
     $sql = "SELECT * FROM `stockholders` WHERE `stock_id`='$id'";
     $result=mysqli_query($this->db, $sql);
-    $user_data = mysqli_fetch_array($result);
     $count_row=$result->num_rows;
+
     if($count_row>0){
       $result = mysqli_query($this->db, $sql);
       while($row=mysqli_fetch_assoc($result)){
@@ -47,7 +47,6 @@ class Stock{
   public function new_stock($name,$loc,$desc,$qty,$price,$brand,$year) {
     $sql = "SELECT * FROM `stockholders` WHERE `stock_name`='$name' AND `stock_location`='$loc' AND `stock_description`='$desc' AND `stock_price`='$price' AND `stock_brand`='$brand' AND `stock_year`='$year'";    
     $result=mysqli_query($this->db, $sql);
-    $user_data = mysqli_fetch_array($result);
     $count_row=$result->num_rows;
     
     if($count_row==0){
@@ -65,7 +64,6 @@ class Stock{
   public function edit_stock($id,$name,$loc,$desc,$qty,$price,$brand,$year) {
     $sql = "SELECT * FROM `stockholders` WHERE `stock_id`='$id'";    
     $result=mysqli_query($this->db, $sql);
-    $user_data = mysqli_fetch_array($result);
     $count_row=$result->num_rows;
     
     if($count_row>0){
