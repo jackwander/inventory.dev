@@ -1,5 +1,5 @@
 # inventory.dev
-CRUD for inventory.
+OOP CRUD for PHP.
 
 ### Database name
 1. dbstock
@@ -18,5 +18,3 @@ CRUD for inventory.
 1. stock_year
 
 
-### Reminder.
-put the `www` folder to your `htdocs` folder in xampp and rename it.
