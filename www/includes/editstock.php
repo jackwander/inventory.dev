@@ -21,10 +21,6 @@
     <label>Description</label>
     <input type="text" name="desc" required="" value="<?php echo $value['stock_description'] ?>" class="form-control" />
   </div>
-  <div class="form-group">
-    <label>QTY</label>
-    <input type="number" name="qty" required="" value="<?php echo $value['stock_quantity'] ?>" class="form-control" />
-  </div>
  </div>
  <div class="col-md-6">
   <div class="form-group">
