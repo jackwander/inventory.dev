@@ -1,10 +1,9 @@
-<div class="offset-md-3 col-md-6">
-<h3>Edit stock</h3>
+<div class="offset-md-2 col-md-8">
 <form action="/processes/process.stock.php?action=edit" method="POST" onsubmit="return confirm('Are you sure you want to edit this?')">
 <?php 
   $stocks = new Stock();
   // Ang $id ara na sa index na define.
-  $result = $stocks->get_stock($id);
+  $result = $stocks->get_stock($value['stock_id']);
 ?>
 <?php foreach ($result as $value): ?>
   <input type="hidden" name="id" value="<?php echo $value['stock_id'] ?>">
@@ -21,10 +20,6 @@
   <div class="form-group">
     <label>Description</label>
     <input type="text" name="desc" required="" value="<?php echo $value['stock_description'] ?>" class="form-control" />
-  </div>
-  <div class="form-group">
-    <label>QTY</label>
-    <input type="number" name="qty" required="" value="<?php echo $value['stock_quantity'] ?>" class="form-control" />
   </div>
  </div>
  <div class="col-md-6">
@@ -48,3 +43,4 @@
   </div>
 </form>
 </div>
+

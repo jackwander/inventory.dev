@@ -13,10 +13,6 @@
       <label>Description</label>
       <input type="text" name="desc" required=""  class="form-control" />
     </div>
-    <div class="form-group">
-      <label>QTY</label>
-      <input type="number" name="qty" required="" class="form-control" />
-    </div>
   </div>
   <div class="col-md-6">
     
