@@ -15,7 +15,7 @@ class User{
   
   public function check_login($user,$password) {
     $pass = md5($password);
-    $sql = "SELECT * FROM `tbl_users` WHERE `username`='$user' AND `password`='$pass'"; 
+    $sql = "SELECT * FROM `tbl_users` WHERE `email`='$user' AND `password`='$pass'"; 
     $result = mysqli_query($this->db, $sql);
 		$check=$this->db->query($sql)or 
 			die(mysqli_connect_errno()."nd okay.");			
