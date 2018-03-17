@@ -11,7 +11,7 @@
       
       <!-- Modal body -->
       <div class="modal-body">
-      <?php include('includes/addstock.php') ?>
+      <?php include('../includes/addstock.php') ?>
       </div>
       
       <!-- Modal footer -->
