@@ -26,6 +26,7 @@ class User{
         session_regenerate_id();
         $_SESSION['login']=TRUE;
         $_SESSION['user_id']=$row['user_id']; 
+        $_SESSION['position']=$row['position'];
         return TRUE;
       }
     }else{
@@ -33,5 +34,9 @@ class User{
     }
   }
 
+	public function user_logout(){
+		$_SESSION['login']=false;
+		session_destroy();
+	}
 }
 ?>
