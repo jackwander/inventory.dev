@@ -1,7 +1,7 @@
 <?php
 session_start();
-include 'settings/config.php';
-include 'classes/class.users.php';
+include '../settings/config.php';
+include '../classes/class.users.php';
 $user = new User();
 
 if(isset($_REQUEST['submit'])){
