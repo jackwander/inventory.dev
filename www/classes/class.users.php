@@ -21,21 +21,28 @@ class User{
 			die(mysqli_connect_errno()."nd okay.");			
 		$count_row=$check->num_rows;
 
-    if($count_row>0){
-      while($row=mysqli_fetch_assoc($result)){
+    if($count_row>0) {
+      while($row=mysqli_fetch_assoc($result)) {
         session_regenerate_id();
         $_SESSION['login']=TRUE;
         $_SESSION['user_id']=$row['user_id']; 
         $_SESSION['position']=$row['position'];
         return TRUE;
       }
-    }else{
+    } else {
       return FALSE;
     }
   }
 
-	public function user_logout(){
-		$_SESSION['login']=false;
+	public function get_session() {
+		if($_SESSION['login'] == true) {
+            return $_SESSION['login'];
+        }else
+            return false;
+	}
+
+	public function user_logout() {
+		$_SESSION['login']=FALSE;
 		session_destroy();
 	}
 }
