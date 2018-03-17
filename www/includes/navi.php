@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="#">Stockholders</a>
+  <a class="navbar-brand" href="#">Inventory</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -10,6 +10,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#" data-toggle="modal" data-target="#addStock">Add Stock</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../index.php?q=logout">Logout</a>
       </li>
     </ul>
     <form class="form-inline mt-2 mt-md-0">
