@@ -25,12 +25,15 @@ $id = (isset($_GET['id']) && $_GET['id'] != '') ? $_GET['id'] : '';
 <?php include('../includes/results.php') ?>
 <?php
   switch($action){
-    case 'edit':
-      require_once '../includes/editstock.php';
+    case 'stocks':
+      require_once 'stocks.php';
+      break;
+    case 'users':
+      require_once 'users/index.php';
       break;
 
     default:
-      require_once '../stocks.php';
+      require_once 'dashboard.php';
   }
 ?>  
 </div>
