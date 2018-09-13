@@ -10,7 +10,7 @@ if(isset($_REQUEST['submit'])) {
     if($login) {
         header("location: ../index.php");
     } else {
-      alert('Access Failure');
+      echo "<script>alert('Access Failure')</script>";
     }
 }
 ?>
@@ -22,7 +22,7 @@ if(isset($_REQUEST['submit'])) {
 </head>
 
 <body class="text-center">
-  <form action="" METHOD="POST" class="form-signin">
+  <form action="#" METHOD="POST" class="form-signin">
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <label for="inputEmail" class="sr-only">Email address</label>
     <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
