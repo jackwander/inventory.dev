@@ -34,6 +34,31 @@ class User{
     }
   }
 
+  public function new_user($fname,$mname,$lname,$email,$password,$position) {
+    $pass = md5($password);
+    $sql = "SELECT * FROM `tbl_users` WHERE `$email`='$email'";
+    $result=mysqli_query($this->db, $sql);
+    $count_row=$result->num_rows;
+
+    if($count_row==0){
+      $sql = "SELECT * FROM `tbl_users` WHERE `fname`='$fname' AND `mname`='$mname' AND `lname`='$lname'";
+      $result=mysqli_query($this->db, $sql);
+      $count_row=$result->num_rows;
+
+      if($count_row==0){
+        $sql="INSERT INTO `tbl_users` (`fname`,`mname`,`lname`,`email`,`password`,`position`)
+        VALUES ('$fname','$mname','$lname','$email','$pass','$position')";
+        $result=mysqli_query($this->db,$sql) or
+        die(mysqli_connect_errno()."nd ma butang ang new user.");
+        return $result;
+      } else {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  }
+
   public function get_users() {
     $sql = "SELECT * FROM `tbl_users` ORDER BY `fname` ASC";
     $result=mysqli_query($this->db, $sql);
