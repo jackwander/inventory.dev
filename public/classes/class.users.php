@@ -72,7 +72,23 @@ class User{
     }else{
       $type=0;
     }
-    return $type;    
+    return $type;
+  }
+
+  public function get_users_user_only() {
+    $sql = "SELECT * FROM `tbl_users` WHERE `position`='user' ORDER BY `fname` ASC";
+    $result=mysqli_query($this->db, $sql);
+    $count_row=$result->num_rows;
+
+    if($count_row>0){
+      $result = mysqli_query($this->db, $sql);
+      while($row=mysqli_fetch_assoc($result)){
+        $type[]=$row;
+      }
+    }else{
+      $type=0;
+    }
+    return $type;
   }
 
 	public function get_session() {
