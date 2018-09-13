@@ -5,8 +5,11 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.php">Stocks</a>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?act=stocks">Stocks</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?act=users">Users</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="../index.php?q=logout">Logout</a>
