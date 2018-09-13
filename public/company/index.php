@@ -16,7 +16,7 @@ $id = (isset($_GET['id']) && $_GET['id'] != '') ? $_GET['id'] : '';
 </head>
 <body>
 <div class="header">
-<?php include('../includes/navi.php') ?>
+<?php include('../includes/company-navi.php') ?>
 </div>
 
 <?php include('../includes/modals.php') ?>
@@ -25,12 +25,12 @@ $id = (isset($_GET['id']) && $_GET['id'] != '') ? $_GET['id'] : '';
 <?php include('../includes/results.php') ?>
 <?php
   switch($action){
-    case 'edit':
-      require_once '../includes/editstock.php';
+    case 'users':
+      require_once 'users/index.php';
       break;
 
     default:
-      require_once '../stocks.php';
+      require_once 'dashboard.php';
   }
 ?>  
 </div>
@@ -38,3 +38,4 @@ $id = (isset($_GET['id']) && $_GET['id'] != '') ? $_GET['id'] : '';
 <?php include('../includes/scripts.php') ?>
 <script>window.jQuery || document.write('<script src="../assets/plugins/bootstrap/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 </html>
+
