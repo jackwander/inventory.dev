@@ -4,6 +4,12 @@ session_start();
 include('../settings/config.php');
 include('../classes/class.stocks.php');
 include('../classes/class.users.php');
+$user = new User();
+
+if(!$user->get_session()){
+  header("location: system/login.php");
+}
+
 /* Getter variables */
 $action = (isset($_GET['act']) && $_GET['act'] != '') ? $_GET['act'] : '';
 $process = (isset($_GET['pro']) && $_GET['pro'] != '') ? $_GET['pro'] : '';
