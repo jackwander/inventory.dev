@@ -9,6 +9,8 @@ if(isset($_REQUEST['submit'])) {
     $login = $user->check_login($email,$password);
     if($login) {
         header("location: ../index.php");
+    } else {
+      alert('Access Failure');
     }
 }
 ?>
