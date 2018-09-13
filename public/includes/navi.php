@@ -9,9 +9,6 @@
         <a class="nav-link" href="index.php">Stocks</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" data-toggle="modal" data-target="#addStock">Add Stock</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="../index.php?q=logout">Logout</a>
       </li>
     </ul>
@@ -21,4 +18,3 @@
     </form>
   </div>
 </nav>
-
